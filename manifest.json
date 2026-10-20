@@ -1,0 +1,54 @@
+{
+    "name": "تفوق مع رقية — شعبة الآداب",
+    "short_name": "تفوق مع رقية",
+    "description": "تطبيق تعليمي تفاعلي لدعم دروس السنة الثالثة ثانوي شعبة الآداب والعلوم الإنسانية حسب البرنامج الرسمي لوزارة التربية الوطنية الجزائرية: ملخصات، قواعد، فيديوهات، مراجعات، اختبارات Quiz، فروض الفصول ونماذج مع الحلول.",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#f1f5f9",
+    "theme_color": "#7c3aed",
+    "orientation": "portrait-primary",
+    "lang": "ar",
+    "dir": "rtl",
+    "categories": ["education"],
+    "icons": [
+        { "src": "icons/icon-72.png", "sizes": "72x72", "type": "image/png", "purpose": "any" },
+        { "src": "icons/icon-96.png", "sizes": "96x96", "type": "image/png", "purpose": "any" },
+        { "src": "icons/icon-128.png", "sizes": "128x128", "type": "image/png", "purpose": "any" },
+        { "src": "icons/icon-144.png", "sizes": "144x144", "type": "image/png", "purpose": "any" },
+        { "src": "icons/icon-152.png", "sizes": "152x152", "type": "image/png", "purpose": "any" },
+        { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+        { "src": "icons/icon-384.png", "sizes": "384x384", "type": "image/png", "purpose": "any" },
+        { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    ],
+    "shortcuts": [
+        {
+            "name": "المواد الدراسية",
+            "short_name": "المواد",
+            "description": "تصفح مواد شعبة الآداب",
+            "url": "./index.html#/",
+            "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "اختبارات Quiz",
+            "short_name": "Quiz",
+            "description": "اختبر معلوماتك في كل مادة",
+            "url": "./index.html#/subject/arabic/quiz",
+            "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "فروض ونماذج",
+            "short_name": "الفروض",
+            "description": "فروض الفصول ونماذج الاختبارات مع الحلول",
+            "url": "./index.html#/subject/arabic/exams",
+            "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "شهادة الباك 2027",
+            "short_name": "الباك 2027",
+            "description": "حوليات الباك وتوقعات 2027 ومولّد شهادة افتراضية",
+            "url": "./index.html#/bac",
+            "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+        }
+    ]
+}

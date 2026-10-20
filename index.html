@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#7c3aed" />
+    <meta name="description" content="تفوق مع رقية — تطبيق تعليمي تفاعلي لدعم دروس السنة الثالثة ثانوي شعبة الآداب والعلوم الإنسانية حسب البرنامج الرسمي الجزائري: ملخصات، قواعد، فيديوهات، مراجعات، اختبارات Quiz وفروض الفصول ونماذج مع الحلول." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>تفوق مع رقية — شعبة الآداب</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="overlay" data-close-drawer></div>
+
+    <!-- صفحة الدخول -->
+    <div id="loginScreen" class="login-screen hidden">
+        <div class="login-card">
+            <div class="login-logo-wrap">
+                <img src="icons/icon-192.png" alt="Learn with Rekaia" class="login-logo" />
+            </div>
+            <h1 class="login-title">تفوق مع رقية</h1>
+            <p class="login-sub">السنة الثالثة ثانوي — شعبة الآداب والعلوم الإنسانية</p>
+            <form id="loginForm" class="login-form" autocomplete="off">
+                <label class="login-field">
+                    <span>الاسم</span>
+                    <input type="text" id="loginName" placeholder="اكتب اسمك هنا" required maxlength="30" />
+                </label>
+                <label class="login-field">
+                    <span>العمر</span>
+                    <input type="number" id="loginAge" placeholder="اكتب عمرك" required min="10" max="25" />
+                </label>
+                <button type="submit" class="login-btn">🚀 الدخول مباشرة</button>
+            </form>
+            <blockquote class="login-quote">
+                «النجاح ليس نهاية والفشل ليس قاتلاً إنما الشجاعة للاستمرار هي ما يهم»
+                <cite>— وينستون شيرشيل</cite>
+            </blockquote>
+        </div>
+    </div>
+
+    <header class="topbar">
+        <button class="icon-btn" data-drawer aria-label="القائمة">☰</button>
+        <div class="brand" data-nav="#/">
+            <img src="icons/icon-72.png" alt="" class="brand-img" />
+            <span class="brand-name">تفوق مع رقية</span>
+        </div>
+        <span id="userChip" class="user-chip hidden"></span>
+        <button id="installBtn" class="install-btn hidden">⬇ تثبيت التطبيق</button>
+    </header>
+
+    <aside id="drawer" class="drawer">
+        <div class="drawer-head">
+            <img src="icons/icon-96.png" alt="" class="brand-img big" />
+            <div>
+                <b>تفوق مع رقية</b>
+                <small id="drawerUser">البرنامج الرسمي الجزائري</small>
+            </div>
+        </div>
+        <nav class="drawer-nav">
+            <button data-nav="#/">🏠 الرئيسية</button>
+            <button id="logoutBtn" class="logout-btn">👋 خروج (تسجيل الدخول من جديد)</button>
+            <div class="drawer-sub">المواد:</div>
+            <div id="drawerSubjects"></div>
+            <div class="drawer-sub">الباك 2027:</div>
+            <button data-nav="#/bac">🏛 شهادة الباك 2027</button>
+            <button data-nav="#/bac/annales">📚 حوليات 2024-2026</button>
+            <button data-nav="#/bac/predict">🔮 توقعات 2027</button>
+            <button data-nav="#/bac/generate">🧾 مولّد شهادة افتراضية</button>
+            <button data-nav="#/">📌 نصائح التحضير</button>
+        </nav>
+        <div class="drawer-foot">وفق البرنامج الرسمي لوزارة التربية الوطنية 🇩🇿 · dzexams.com/ar/3as</div>
+    </aside>
+
+    <main id="app"></main>
+
+    <script src="data.js"></script>
+    <script src="data-arabic.js"></script>
+    <script src="data-philo.js"></script>
+    <script src="data-histgeo.js"></script>
+    <script src="data-islamic.js"></script>
+    <script src="data-langs.js"></script>
+    <script src="data-math.js"></script>
+    <script src="data-bac.js"></script>
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var host = document.getElementById('drawerSubjects');
+            SUBJECTS.forEach(function (s) {
+                var b = document.createElement('button');
+                b.textContent = s.icon + ' ' + s.name;
+                b.setAttribute('data-nav', '#/subject/' + s.id);
+                b.addEventListener('click', function () { navigate('#/subject/' + s.id); closeDrawer(); });
+                host.appendChild(b);
+            });
+            document.querySelectorAll('#drawer [data-nav]').forEach(function (el) {
+                if (!el.dataset.bound) {
+                    el.dataset.bound = '1';
+                    el.addEventListener('click', function () {
+                        navigate(el.getAttribute('data-nav'));
+                        closeDrawer();
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
