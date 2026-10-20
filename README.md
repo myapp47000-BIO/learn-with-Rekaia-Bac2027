@@ -8,4 +8,4 @@
 * **تتبع التقدم شخصياً**: ميزة متابعة نسبة إنجاز الدورة والدروس لإبقاء الطالب على دراية بمستواه وتحفيزه بشكل مستمر.
 * **واجهة حديثة وسهلة الاستخدام**: تصميم بصري هادئ ومريح للعين يعكس الهوية الثقافية والمحلية للمنطقة ويساعد على التركيز أثناء الدراسة.
 > 🎓 **رؤيتنا**: جعل رحلة التحضير للبكالوريا ممتعة، منظمة، ومتاحة لجميع الطلاب في أي وقت ومن أي مكان!
-![Image Alt](https://github.com/myapp47000-BIO/smail-learn-3am/blob/c494f6b653e46fac9f10c746eab618ecd8d7debb/Gemini_Generated_Image_eaoctreaoctreaoc.jpg))
+![Image Alt](https://github.com/myapp47000-BIO/learn-with-Rekaia-Bac2027/blob/30cd8ca4802ec60a989d7cf1f3c07b7b80fc1cfb/Gemini_Generated_Image_d8lavid8lavid8la.jpg)
